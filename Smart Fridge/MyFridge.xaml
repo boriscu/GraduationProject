@@ -1,0 +1,27 @@
+﻿<Window x:Class="Smart_Fridge.MyFridge"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Smart_Fridge"
+        mc:Ignorable="d"
+        Title="" Height="450" Width="800">
+    <Grid>
+        <ListView x:Name="StuffInMyFridge" Margin="24,55,357,37" Background="WhiteSmoke" BorderBrush="White" ItemsSource="{Binding stavkeFrizidera}">
+            <ListView.View>
+                <GridView>
+                    <GridViewColumn/>
+                </GridView>
+            </ListView.View>
+        </ListView>
+        <Button Content="Add" HorizontalAlignment="Left" Margin="581,55,0,0" VerticalAlignment="Top" Height="31" Width="118" Click="Button_Click_1"/>
+        <Button Content="Remove" HorizontalAlignment="Left" Margin="581,118,0,0" VerticalAlignment="Top" Height="38" Width="118" RenderTransformOrigin="0.472,0.988" Click="Button_Click_2"/>
+        <Button Content="Home" HorizontalAlignment="Left" Margin="12,10,0,0" VerticalAlignment="Top" Height="28" Width="138" FontFamily="Century Schoolbook" Click="Button_Click"/>
+        <Label Visibility="Hidden" Name="SakriveniLabel"  Content="Amount to remove:" HorizontalAlignment="Left" Margin="496,194,0,0" VerticalAlignment="Top" Height="27"/>
+        <TextBox Visibility="Hidden" Name="SakriveniTextBox"  HorizontalAlignment="Left" Height="23" Margin="617,198,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="82"/>
+        <Button Visibility="Hidden" Name="IzbrisiStavku" Content="Remove" HorizontalAlignment="Left" Margin="717,201,0,0" VerticalAlignment="Top" Width="65" Click="IzbrisiStavku_Click"/>
+        <Button Content="?" HorizontalAlignment="Left" Margin="162,10,0,0" VerticalAlignment="Top" Width="30" Height="28" Click="Button_Click_3"/>
+        <TextBox BorderThickness="0" Name="TextBoxInfo" Visibility="Hidden" HorizontalAlignment="Left" Height="23" Margin="254,15,0,0" TextWrapping="Wrap" Text="" IsReadOnly="True" VerticalAlignment="Top" Width="120" Background="{x:Null}"/>
+        <Label Name ="LabelCalories"  Visibility="Hidden" Content="Calories: " HorizontalAlignment="Left" Margin="202,11,0,0" VerticalAlignment="Top"/>
+    </Grid>
+</Window>
